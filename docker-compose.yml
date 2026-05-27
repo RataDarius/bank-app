@@ -1,0 +1,51 @@
+services:
+  db:
+    image: mysql:8.0
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpass
+      MYSQL_DATABASE: securebank
+      MYSQL_USER: bank
+      MYSQL_PASSWORD: bankpass
+    volumes:
+      - db_data:/var/lib/mysql
+      - ./sql:/docker-entrypoint-initdb.d
+    ports:
+      - "3306:3306"
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  web:
+    build: .
+    ports:
+      - "8080:80"
+    volumes:
+      - ./templates:/var/www/html
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      DB_HOST: db
+      DB_USER: bank
+      DB_PASS: bankpass
+      DB_NAME: securebank
+
+  bot:
+    build: .
+    volumes:
+      - ./bot:/bot
+      - ./templates:/var/www/html
+    depends_on:
+      - web
+    environment:
+      DB_HOST: db
+      DB_USER: bank
+      DB_PASS: bankpass
+      DB_NAME: securebank
+      WEB_URL: "http://web:80"
+    command: ["php", "/bot/visit_forum.php"]
+
+volumes:
+  db_data:
