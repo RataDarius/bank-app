@@ -86,7 +86,7 @@ foreach ($forumPosts as $p) {
                             <span style="font-size:11px;background:#ffcdd2;padding:2px 8px;border-radius:10px;margin-left:6px;">Private</span>
                             &middot; <?= $p['created_at'] ?>
                         </div>
-                        <div class="post-content"><?= nl2br(htmlspecialchars($p['content'])) ?></div>
+                        <div class="post-content"><?= nl2br($p['content']) ?></div>
                         <div style="margin-top: 10px;">
                             <a href="?delete=<?= $p['id'] ?>" class="btn btn-danger" style="padding:4px 12px;font-size:12px;" onclick="return confirm('Delete this post?')">Delete</a>
                         </div>
@@ -137,7 +137,7 @@ foreach ($forumPosts as $p) {
                             <?php endif; ?>
                             &middot; <?= $p['created_at'] ?>
                         </div>
-                        <div class="post-content"><?= nl2br(htmlspecialchars($p['content'])) ?></div>
+                        <div class="post-content"><?= nl2br($p['content']) ?></div>
                         <div style="margin-top: 10px;">
                             <a href="?delete=<?= $p['id'] ?>" class="btn btn-danger" style="padding:4px 12px;font-size:12px;" onclick="return confirm('Delete this post?')">Delete</a>
                         </div>

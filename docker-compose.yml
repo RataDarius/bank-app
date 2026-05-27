@@ -33,19 +33,13 @@ services:
       DB_NAME: securebank
 
   bot:
-    build: .
+    build: ./bot
     volumes:
-      - ./bot:/bot
       - ./templates:/var/www/html
     depends_on:
       - web
     environment:
-      DB_HOST: db
-      DB_USER: bank
-      DB_PASS: bankpass
-      DB_NAME: securebank
       WEB_URL: "http://web:80"
-    command: ["php", "/bot/visit_forum.php"]
 
 volumes:
   db_data:

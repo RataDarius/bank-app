@@ -3,6 +3,8 @@ require_once __DIR__ . '/db.php';
 
 function startSession(): void {
     if (session_status() === PHP_SESSION_NONE) {
+        ini_set('session.cookie_httponly', '0');
+        ini_set('session.cookie_samesite', 'Lax');
         session_start();
     }
 }
