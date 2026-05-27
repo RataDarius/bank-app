@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 $webUrl = getenv('WEB_URL') ?: 'http://web:80';
 $interval = 60;
-$adminUsername = 'admin';
+$adminUsername = 'anghel.cristi';
 $adminPassword = 'password';
 
 echo "[BOT] Starting admin forum visitor...\n";

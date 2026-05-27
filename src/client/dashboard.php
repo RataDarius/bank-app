@@ -16,6 +16,14 @@ $accountsList = $accounts->fetchAll();
 
 $totalBalance = array_sum(array_column($accountsList, 'balance'));
 
+$managerStmt = $db->prepare("
+    SELECT u.full_name, u.username, u.email
+    FROM users u
+    WHERE u.id = (SELECT manager_id FROM users WHERE id = :uid)
+");
+$managerStmt->execute(['uid' => $userId]);
+$manager = $managerStmt->fetch();
+
 $fiveMinutesAgo = date('Y-m-d H:i:s', strtotime('-5 minutes'));
 $db->prepare("
     UPDATE transactions t
@@ -76,6 +84,11 @@ unset($_SESSION['flash'], $_SESSION['flash_error']);
             <div class="label">Total Balance</div>
             <div class="amount">$<?= number_format($totalBalance, 2) ?></div>
             <div class="account-info"><?= count($accountsList) ?> account(s)</div>
+            <?php if ($manager): ?>
+                <div class="account-info" style="margin-top:6px;font-size:14px;">
+                    Your Manager: <strong><?= htmlspecialchars($manager['full_name']) ?></strong>
+                </div>
+            <?php endif; ?>
         </div>
 
         <?php if (!empty($pendingIn)): ?>

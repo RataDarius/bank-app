@@ -37,7 +37,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         } else {
             $hash = password_hash($password, PASSWORD_DEFAULT);
 
-            $defManager = $db->prepare("SELECT id FROM users WHERE username = 'manager3' LIMIT 1");
+            $defManager = $db->prepare("SELECT id FROM users WHERE username = 'emily.davis' LIMIT 1");
             $defManager->execute();
             $defaultManagerId = $defManager->fetchColumn();
 
