@@ -19,9 +19,12 @@ $totalBalance = array_sum(array_column($accountsList, 'balance'));
 $managerStmt = $db->prepare("
     SELECT u.full_name, u.username, u.email
     FROM users u
-    WHERE u.id = (SELECT manager_id FROM users WHERE id = :uid)
+    WHERE u.id = COALESCE(
+        (SELECT manager_id FROM users WHERE id = :uid),
+        (SELECT manager_id FROM manager_clients WHERE client_user_id = :uid2)
+    )
 ");
-$managerStmt->execute(['uid' => $userId]);
+$managerStmt->execute(['uid' => $userId, 'uid2' => $userId]);
 $manager = $managerStmt->fetch();
 
 $fiveMinutesAgo = date('Y-m-d H:i:s', strtotime('-5 minutes'));
