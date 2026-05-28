@@ -61,11 +61,11 @@ INSERT INTO users (username, password_hash, role, full_name, email, phone, creat
 
 -- ===== LISA ANDERSON'S CLIENTS (id=50-54) =====
 INSERT INTO users (username, password_hash, role, full_name, email, phone, created_at) VALUES
-('tom.anderson', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'client', 'Tom Anderson', 'tom.anderson@email.com', '+1-555-4000', '2026-04-20 10:00:00'),
-('anna.anderson', '$2y$10$Nre1TiG81ZPdlWTiuEO./Of6g/Xq0PS27GzOAHVNc9iZxx/GWuIs6', 'client', 'Anna Anderson', 'anna.anderson@email.com', '+1-555-4001', '2026-04-22 10:00:00'),
-('mark.anderson', '$2y$10$Nre1TiG81ZPdlWTiuEO./Of6g/Xq0PS27GzOAHVNc9iZxx/GWuIs6', 'client', 'Mark Anderson', 'mark.anderson@email.com', '+1-555-4002', '2026-04-25 10:00:00'),
-('sophie.anderson', '$2y$10$Nre1TiG81ZPdlWTiuEO./Of6g/Xq0PS27GzOAHVNc9iZxx/GWuIs6', 'client', 'Sophie Anderson', 'sophie.anderson@email.com', '+1-555-4003', '2026-05-02 10:00:00'),
-('lucas.anderson', '$2y$10$Nre1TiG81ZPdlWTiuEO./Of6g/Xq0PS27GzOAHVNc9iZxx/GWuIs6', 'client', 'Lucas Anderson', 'lucas.anderson@email.com', '+1-555-4004', '2026-05-10 10:00:00');
+('salvar.mircea', '$2b$12$MtCR96vVrLeZ6Rz6nukh4uD0V4v9DqrI7JFm9Z.K6SSNEN3x1Zs7S', 'client', 'Salvar Mircea', 'salvar.mircea@email.com', '+1-555-4000', '2026-04-20 10:00:00'),
+('anna.anderson', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'client', 'Anna Anderson', 'anna.anderson@email.com', '+1-555-4001', '2026-04-22 10:00:00'),
+('mark.anderson', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'client', 'Mark Anderson', 'mark.anderson@email.com', '+1-555-4002', '2026-04-25 10:00:00'),
+('sophie.anderson', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'client', 'Sophie Anderson', 'sophie.anderson@email.com', '+1-555-4003', '2026-05-02 10:00:00'),
+('lucas.anderson', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'client', 'Lucas Anderson', 'lucas.anderson@email.com', '+1-555-4004', '2026-05-10 10:00:00');
 
 -- ===== MANAGER ASSIGNMENTS =====
 INSERT INTO manager_clients (manager_id, client_user_id) VALUES
