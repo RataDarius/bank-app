@@ -15,7 +15,7 @@ $fullName = trim($_POST['full_name'] ?? '');
 $email = trim($_POST['email'] ?? '');
 $role = $_POST['role'] ?? '';
 
-if (empty($username) || empty($password) || empty($fullName) || empty($email) || $role !== 'manager') {
+if (empty($username) || empty($password) || empty($fullName) || empty($email)) {
     $_SESSION['flash_error'] = 'All fields are required.';
     header('Location: dashboard.php');
     exit;
