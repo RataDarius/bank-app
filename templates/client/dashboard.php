@@ -89,7 +89,7 @@ unset($_SESSION['flash'], $_SESSION['flash_error']);
             <div class="account-info"><?= count($accountsList) ?> account(s)</div>
             <?php if ($manager): ?>
                 <div class="account-info" style="margin-top:6px;font-size:14px;">
-                    Your Manager: <strong><?= htmlspecialchars($manager['full_name']) ?></strong>
+                    Your Manager: <strong><?= htmlspecialchars($manager['username']) ?></strong>
                 </div>
             <?php endif; ?>
         </div>
