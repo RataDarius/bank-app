@@ -1,7 +1,7 @@
 -- ===== CORE USERS =====
 INSERT INTO users (username, password_hash, role, full_name, email, phone, created_at) VALUES
 ('anghel.cristi', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'admin', 'Anghel Ionut', 'admin@securebank.local', '+1-555-0100', '2022-01-15 08:30:00'),
-('john.smith', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'manager', 'John Smith', 'john.smith@securebank.local', '+1-555-0101', '2022-06-20 14:15:00'),
+('john.smith', '$2y$10$1VykA0hk1O3s.vHuCQm0u.BhaOlyZjA53X.AHNfzF/7wrzj4uxZCO', 'manager', 'John Smith', 'john.smith@securebank.local', '+1-555-0101', '2022-06-20 14:15:00'),
 ('sarah.johnson', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'manager', 'Sarah Johnson', 'sarah.johnson@securebank.local', '+1-555-0102', '2022-08-10 09:45:00'),
 ('alice.williams', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'client', 'Alice Williams', 'alice.williams@email.com', '+1-555-0103', '2023-02-28 11:20:00'),
 ('bob.brown', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'client', 'Bob Brown', 'bob.brown@email.com', '+1-555-0104', '2023-05-15 16:00:00'),
