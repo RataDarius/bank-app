@@ -54,7 +54,7 @@ INSERT INTO users (username, password_hash, role, full_name, email, phone, creat
 ('michael.brown', '$2y$10$Nre1TiG81ZPdlWTiuEO./Of6g/Xq0PS27GzOAHVNc9iZxx/GWuIs6', 'manager', 'Michael Brown', 'michael.brown@securebank.local', '+1-555-0107', '2023-03-15 10:00:00'),
 ('jennifer.wilson', '$2y$10$Nre1TiG81ZPdlWTiuEO./Of6g/Xq0PS27GzOAHVNc9iZxx/GWuIs6', 'manager', 'Jennifer Wilson', 'jennifer.wilson@securebank.local', '+1-555-0108', '2024-01-10 11:30:00'),
 ('robert.taylor', '$2y$10$Nre1TiG81ZPdlWTiuEO./Of6g/Xq0PS27GzOAHVNc9iZxx/GWuIs6', 'manager', 'Robert Taylor', 'robert.taylor@securebank.local', '+1-555-0109', '2025-10-15 09:00:00'),
-('lisa.anderson', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'manager', 'Lisa Anderson', 'lisa.anderson@securebank.local', '+1-555-0110', '2025-12-01 14:00:00'),
+('lisa.anderson', '$2y$10$I7wdmH0WJks7aho/.aOeo.ieSg.aPYfucvJcFa2lYfCQxP0tqyvW.', 'manager', 'Lisa Anderson', 'lisa.anderson@securebank.local', '+1-555-0110', '2025-12-01 14:00:00'),
 ('david.thomas', '$2y$10$Nre1TiG81ZPdlWTiuEO./Of6g/Xq0PS27GzOAHVNc9iZxx/GWuIs6', 'manager', 'David Thomas', 'david.thomas@securebank.local', '+1-555-0111', '2026-01-20 08:45:00'),
 ('maria.garcia', '$2y$10$Nre1TiG81ZPdlWTiuEO./Of6g/Xq0PS27GzOAHVNc9iZxx/GWuIs6', 'manager', 'Maria Garcia', 'maria.garcia@securebank.local', '+1-555-0112', '2026-03-01 16:30:00'),
 ('james.martinez', '$2y$10$Nre1TiG81ZPdlWTiuEO./Of6g/Xq0PS27GzOAHVNc9iZxx/GWuIs6', 'manager', 'James Martinez', 'james.martinez@securebank.local', '+1-555-0113', '2026-04-15 11:15:00');
